@@ -1,5 +1,5 @@
 project(ceccclient)
-cmake_minimum_required(VERSION 3.12.0)
+cmake_minimum_required(VERSION 3.11.0)
 
 set(ceccclient_NAME ceccclient)
 set(ceccclient_DESCRIPTION "libCEC test client")
