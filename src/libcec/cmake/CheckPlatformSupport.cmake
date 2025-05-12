@@ -363,16 +363,16 @@ else()
 
       if (${PYTHON_MAJOR_VERSION} EQUAL 2)
         install(TARGETS     ${SWIG_MODULE_pycec_REAL_NAME}
-                DESTINATION lib/python${PYTHON_VERSION}/${PYTHON_PKG_DIR}/${PYTHON_LIB_INSTALL_PATH}/cec)
+                DESTINATION lib${LIB_SUFFIX}/python${PYTHON_VERSION}/${PYTHON_PKG_DIR}/${PYTHON_LIB_INSTALL_PATH}/cec)
         install(FILES       ${CMAKE_BINARY_DIR}/src/libcec/cec.py
-                DESTINATION lib/python${PYTHON_VERSION}/${PYTHON_PKG_DIR})
+                DESTINATION lib${LIB_SUFFIX}/python${PYTHON_VERSION}/${PYTHON_PKG_DIR}/cec)
         install(FILES ${CMAKE_SOURCE_DIR}/src/libcec/cmake/__init__.py
-                DESTINATION lib/python${PYTHON_VERSION}/${PYTHON_PKG_DIR}/cec)
+                DESTINATION lib${LIB_SUFFIX}/python${PYTHON_VERSION}/${PYTHON_PKG_DIR}/cec)
       else()
         install(TARGETS     ${SWIG_MODULE_pycec_REAL_NAME}
-                DESTINATION lib/python${PYTHON_VERSION}/${PYTHON_PKG_DIR}/${PYTHON_LIB_INSTALL_PATH})
+                DESTINATION lib${LIB_SUFFIX}/python${PYTHON_VERSION}/${PYTHON_PKG_DIR}/${PYTHON_LIB_INSTALL_PATH}/cec)
         install(FILES       ${CMAKE_BINARY_DIR}/src/libcec/cec.py
-                DESTINATION lib/python${PYTHON_VERSION}/${PYTHON_PKG_DIR})
+                DESTINATION lib${LIB_SUFFIX}/python${PYTHON_VERSION}/${PYTHON_PKG_DIR}/cec)
       endif()
     endif()
   endif()
